@@ -32,3 +32,86 @@ The ESP32JsonConfigurator library offers a range of field types for configuring 
 * Select: The select field enables users to choose from a list of predefined options. It's particularly useful when selecting from available Wi-Fi networks or other multiple-choice scenarios.
 
 With these diverse field types, the library facilitates the creation of versatile and user-friendly configuration interfaces for ESP32 devices, ensuring that each setting can be configured in a way that best suits its purpose.
+
+
+## JSON format
+
+I suggest you to explore the structure of the JSON format used for configuring the device. The method of transmission is identical for both sending data to the device and receiving data from it. This JSON format should include descriptions of what is being configured and the corresponding settings. This approach allows for a clear and consistent configuration process for your ESP32 devices.
+
+By defining a well-structured JSON format for configuration, you can ensure that the information is transmitted accurately and can be easily understood by both the sender and the receiver. Here's a basic example of what the JSON format might look like:
+
+```cpp
+{
+  "forms": [
+    {
+      "name": "test_form",
+      "title": "Example Form",
+
+      "members": [
+        {
+          "type": "label",
+          "name": "temperature",
+          "value": "25*C"
+        },
+        {
+          "type": "text",
+          "label": "Question",
+          "name": "name_text",
+          "value": here is default text"
+        },
+        {
+          "type": "password",
+          "label": "Password:",
+          "name": "name_password",
+          "value": "secret password"
+        },
+        {
+          "type": "state",
+          "label": "Power is:",
+          "name": "name_state",
+          "value": true
+        },
+        {
+          "type": "binswitch",
+          "label": "Lamp:",
+          "name": "name_binswitch",
+          "set": true,
+          "autosend": true
+        },
+        {
+          "type": "select",
+          "label": "Please select",
+          "name": "name_option",
+          "set": 0,
+          "values": [
+            {
+              "value": "option0",
+              "label": "option zero"
+            },
+            {
+              "value": "option1",
+              "label": "option one"
+            },
+            {
+              "value": "option2",
+              "label": "option two"
+            }
+          ]
+        }
+      ],
+      "button": [
+        {
+          "type": "save",
+          "label": "Click to save",
+          "name": "save"
+        },
+        {
+          "type": "reset",
+          "label": "Click to reset",
+          "name": "reset"
+        }
+      ]
+    }
+  ]
+}
+
