@@ -57,7 +57,7 @@ By defining a well-structured JSON format for configuration, you can ensure that
           "type": "text",
           "label": "Question",
           "name": "name_text",
-          "value": here is default text"
+          "value": "here is default text"
         },
         {
           "type": "password",
