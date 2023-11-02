@@ -17,7 +17,7 @@
         "type": "git",
         "url": "https://github.com/marcin-filipiak/DeviceConfigJSON"
     },
-    "version": "1.0.0",
+    "version": "0.1.2",
     "frameworks": "Arduino",
     "examples": [
         "examples/*/*.ino"
