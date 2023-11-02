@@ -2,12 +2,12 @@
 DeviceConfigJSON Example
 
 for ESP32 dev module
-example with config by Bluetooth
+example with Bluetooth
 
 **************************/
 
 
-#include "DeviceConfigJSON.h"
+#include <DeviceConfigJSON.h>
 
 #include <BluetoothSerial.h>
 BluetoothSerial SerialBT;

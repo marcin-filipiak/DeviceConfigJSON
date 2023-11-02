@@ -112,16 +112,16 @@ void DeviceConfigJSON::select(const String& label, const String& name, int set, 
 String DeviceConfigJSON::getJSON() {
     String result = "{";
     result += "\"forms\":[";
-    result += "{\"name\":\"testform\",";
-    result += "\"title\":\"form testowy\",";
+    result += "{\"name\":\"" + this->formname + "\",";
+    result += "\"title\":\"" + this->formtitle + "\",";
 
     result += "\"members\": [";
     result += jsonMembers;
     result += "],";
 
     result += "\"button\":[";
-    result += "{\"type\": \"save\",\"label\": \"Zapisz\",\"name\": \"save\"},";
-    result += "{\"type\": \"reset\",\"label\": \"Resetuj\",\"name\": \"reset\"}";
+    result += "{\"type\": \"save\",\"label\": \"Save\",\"name\": \"save\"},";
+    result += "{\"type\": \"reset\",\"label\": \"Reset\",\"name\": \"reset\"}";
     result += "]";
     
     result += "}]}";

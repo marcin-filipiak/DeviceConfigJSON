@@ -1,0 +1,25 @@
+{
+    "name": "DeviceConfigJSON",
+    "description": "Time keeping library",
+    "keywords": "configuration, IoT, communication, protocol",
+    "authors": [
+        {
+            "name": "Marcin Filipiak"
+        },
+        {
+            "name": "Marcin Filipiak",
+            "email": "m.filipiak@noweenergie.org",
+            "url": "http://noweenergie.org",
+            "maintainer": true
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/marcin-filipiak/DeviceConfigJSON"
+    },
+    "version": "1.0.0",
+    "frameworks": "Arduino",
+    "examples": [
+        "examples/*/*.ino"
+    ]
+}
