@@ -1,6 +1,13 @@
 # Library Name: ESP32JsonConfigurator
 
-## Description:
+* <a href="https://github.com/marcin-filipiak/DeviceConfigJSON#description">Description</a>
+* <a href="https://github.com/marcin-filipiak/DeviceConfigJSON#how-it-works">How it works?</a>
+* <a href="https://github.com/marcin-filipiak/DeviceConfigJSON#field-types">Field types</a>
+* <a href="https://github.com/marcin-filipiak/DeviceConfigJSON#json-format">JSON Format</a>
+* <a href="https://github.com/marcin-filipiak/DeviceConfigJSON#gui-for-easy-configuration">GUI for easy configuration</a>
+
+
+## Description
 
 ESP32JsonConfigurator is a C++ library that enables device configuration for ESP32 using the JSON format. This versatile library can serve configuration protocol for interacting with ESP32 devices through Bluetooth from (for example) an Android application. It allows users to dynamically customize their ESP32 settings, such as Wi-Fi network, communication parameters, and other options, using straightforward and intuitive JSON commands.
 
