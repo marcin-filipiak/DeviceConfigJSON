@@ -128,6 +128,6 @@ In development, there are several programs (including Android) that will facilit
 
 ### Android (bluetooth client):
 * under construction
-### Python
+### Python:
 * https://github.com/marcin-filipiak/PyClientDeviceConfigJSON
 
