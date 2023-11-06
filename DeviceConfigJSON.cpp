@@ -124,7 +124,7 @@ String DeviceConfigJSON::getJSON() {
     result += "{\"type\": \"reset\",\"label\": \"Reset\",\"name\": \"reset\"}";
     result += "]";
     
-    result += "}]}";
+    result += "}]}\r\n";
     clear();
     return result;
 }
