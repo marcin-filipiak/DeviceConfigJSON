@@ -70,9 +70,9 @@ void DeviceConfigJSON::binswitch(const String& label, const String& name, bool s
     jsonMembers += "\"label\": \"" + label + "\",";
     jsonMembers += "\"name\": \"" + name + "\",";
     if (set == true) {
-        jsonMembers += "\"isset\": true,";
+        jsonMembers += "\"set\": true,";
     } else {
-        jsonMembers += "\"isset\": false,";
+        jsonMembers += "\"set\": false,";
     }
     if (autosend == true) {
         jsonMembers += "\"autosend\": true";
@@ -91,7 +91,7 @@ void DeviceConfigJSON::select(const String& label, const String& name, int set, 
     jsonMembers += "\"type\":\"select\",";
     jsonMembers += "\"label\":\"" + label + "\",";
     jsonMembers += "\"name\":\"" + name + "\",";
-    jsonMembers += "\"set\":\"" + String(set) + "\",";
+    jsonMembers += "\"set\":" + String(set) + ",";
     jsonMembers += "\"values\":[";
     
     for (int i = 0; i < numValues; i++) {

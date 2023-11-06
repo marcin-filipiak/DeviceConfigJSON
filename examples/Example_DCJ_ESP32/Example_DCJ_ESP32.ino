@@ -38,26 +38,26 @@ void loop() {
         ////////////////////////////////////////
         //here we get configuration from JSON//
 
-        //we are reading only value from "name_text"
+        //for example we are reading only value from "name_text"
         String name_text_value = DeviceConfigJSON.getValue(incoming, "name_text");
       
-        Serial.print("Parameter for name_text is:");
+        Serial.print("Parameter for 'name_text' is:");
         Serial.print(name_text_value);
     }
 
     // If device is connected by bluetooth - send config JSON after 1000ms
     if (SerialBT.connected() && !confsend) {
         delay(1000);
-
+        Serial.println("Device connected. Sending JSON.");
 
         ////////////////////////////////
         // example elements to config //
-        DeviceConfigJSON.label("name_label1", "wartosc1");
-        DeviceConfigJSON.label("name_label2", "wartosc2");
-        DeviceConfigJSON.text("Question:","name_text","here is default text");
-        DeviceConfigJSON.password("Password:","name_password","secret password");
-        DeviceConfigJSON.state("Power is:","name_state",true);
-        DeviceConfigJSON.binswitch("Lamp:","name_binswitch",true,true);
+        DeviceConfigJSON.label("name_label1", "example label1");
+        DeviceConfigJSON.label("name_label2", "example label2");
+        DeviceConfigJSON.text("Question","name_text","here is default text");
+        DeviceConfigJSON.password("Password","name_password","secret password");
+        DeviceConfigJSON.state("Power is","name_state",true);
+        DeviceConfigJSON.binswitch("Lamp","name_binswitch",true,true);
 
         //3 elements to select
         String values[][2] = {
@@ -65,7 +65,7 @@ void loop() {
             {"name_option2", "option 2"},
             {"name_option3", "option 3"}
         };
-        DeviceConfigJSON.select("Please select:","name_option",0,values, ARRAY_SIZE(values));
+        DeviceConfigJSON.select("Please select","name_option",0,values, ARRAY_SIZE(values));
 
         // string with generated json
         String jsonString = DeviceConfigJSON.getJSON();
