@@ -92,7 +92,7 @@ void DeviceConfigJSON::select(const String& label, const String& name, int set, 
     jsonMembers += "\"label\":\"" + label + "\",";
     jsonMembers += "\"name\":\"" + name + "\",";
     jsonMembers += "\"set\":" + String(set) + ",";
-    jsonMembers += "\"values\":[";
+    jsonMembers += "\"value\":[";
     
     for (int i = 0; i < numValues; i++) {
         jsonMembers += "{";
@@ -124,7 +124,7 @@ String DeviceConfigJSON::getJSON() {
     result += "{\"type\": \"reset\",\"label\": \"Reset\",\"name\": \"reset\"}";
     result += "]";
     
-    result += "}]}\r\n";
+    result += "}]}";
     clear();
     return result;
 }

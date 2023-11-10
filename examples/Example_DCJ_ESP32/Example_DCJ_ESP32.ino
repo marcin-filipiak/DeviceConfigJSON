@@ -23,6 +23,8 @@ void setup() {
     
     // Bluetooth device name 
     SerialBT.begin("ESP32"); 
+    // Set a PIN for Bluetooth connection
+    SerialBT.setPin("1111"); // Replace "1111" with your desired PIN
 
     Serial.println("Waiting for a connection...");
 }
