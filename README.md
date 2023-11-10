@@ -90,7 +90,7 @@ By defining a well-structured JSON format for configuration, you can ensure that
           "label": "Please select",
           "name": "name_option",
           "set": 0,
-          "values": [
+          "value": [
             {
               "value": "option0",
               "label": "option zero"
