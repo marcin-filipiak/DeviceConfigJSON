@@ -20,6 +20,8 @@ Key features of the ESP32JsonConfigurator library:
 
 ESP32JsonConfigurator is the ideal tool for IoT project creators, offering convenient device configuration while in use without the need to modify the source code.
 
+https://www.arduino.cc/reference/en/libraries/deviceconfigjson/
+
 ## How it works?
 
 With the ESP32JsonConfigurator library, you can create an object where you define the parameters you want to configure while specifying how they will be displayed on the interface. You can determine whether it's a simple message, a toggle switch, a password field, or other input types. In a way, you are defining an HTML-like form, which will be formatted into JSON.
