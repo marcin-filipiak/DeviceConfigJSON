@@ -50,12 +50,12 @@ void loop() {
         Serial.print("\nValue from 'name_password' is:");
         Serial.print(name_password_value);
 
-        //for example we are reading value from "name_binswitch"
+        //for example we are reading value from "name_binswitch" - bool format in binswitch
         bool name_state_value = DeviceConfigJSON.getSet<bool>(incoming, "name_binswitch");
         Serial.print("\nSetted state in 'name_binswitch' is:");
         Serial.print(name_state_value);
 
-        //for example we are reading value from "name_option"
+        //for example we are reading value from "name_option" - int format selected option
         int name_option_value = DeviceConfigJSON.getSet<int>(incoming, "name_option");
         Serial.print("\nSelected option in 'name_option' is:");
         Serial.print(name_option_value);
