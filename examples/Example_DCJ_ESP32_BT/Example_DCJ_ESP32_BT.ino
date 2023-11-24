@@ -40,11 +40,25 @@ void loop() {
         ////////////////////////////////////////
         //here we get configuration from JSON//
 
-        //for example we are reading only value from "name_text"
+        //for example we are reading value from "name_text"
         String name_text_value = DeviceConfigJSON.getValue(incoming, "name_text");
-      
-        Serial.print("Parameter for 'name_text' is:");
+        Serial.print("\nValue from 'name_text' is:");
         Serial.print(name_text_value);
+
+        //for example we are reading value from "name_password"
+        String name_password_value = DeviceConfigJSON.getValue(incoming, "name_password");
+        Serial.print("\nValue from 'name_password' is:");
+        Serial.print(name_password_value);
+
+        //for example we are reading value from "name_binswitch"
+        bool name_state_value = DeviceConfigJSON.getSet<bool>(incoming, "name_binswitch");
+        Serial.print("\nSetted state in 'name_binswitch' is:");
+        Serial.print(name_state_value);
+
+        //for example we are reading value from "name_option"
+        int name_option_value = DeviceConfigJSON.getSet<int>(incoming, "name_option");
+        Serial.print("\nSelected option in 'name_option' is:");
+        Serial.print(name_option_value);
     }
 
     // If device is connected by bluetooth - send config JSON after 1000ms
