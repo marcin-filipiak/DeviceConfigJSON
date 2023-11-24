@@ -1,3 +1,22 @@
+/*
+
+  Device Config JSON
+
+  Written by Marcin Filipiak
+  http://NoweEnergie.org
+
+    This library is free software: you can redistribute it and/or modify
+    it under the terms of the GNU LESSER GENERAL PUBLIC LICENSE as published by
+    the Free Software Foundation, either version 2.1 of the License.
+
+    This library is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+    See the GNU LESSER GENERAL PUBLIC LICENSE for more details.
+
+*/
+
+
 #include "DeviceConfigJSON.h"
 
 DeviceConfigJSON::DeviceConfigJSON(const String& formn, const String& formt) {
@@ -159,7 +178,8 @@ String DeviceConfigJSON::getValue(String& js, const String& searchString) {
     return "";
 }
 
-String DeviceConfigJSON::getSet(String& js, const String& searchString) {
+template <>
+bool DeviceConfigJSON::getSet<bool>(String& js, const String& searchString) {
     int startPos = js.indexOf(searchString);
 
     if (startPos != -1) {
@@ -171,15 +191,53 @@ String DeviceConfigJSON::getSet(String& js, const String& searchString) {
 
             String fieldName = "set";
             int valueStart = extractedSection.indexOf("\"" + fieldName + "\":");
-            extractedSection = extractedSection.substring(valueStart + 8);
+	
+            extractedSection = extractedSection.substring(valueStart + 6);
+	    int commaPos = extractedSection.indexOf(',');
+            int bracePos = extractedSection.indexOf('}');
 
-            int ppc = extractedSection.indexOf('"');
-            int pdc = extractedSection.indexOf('"', ppc + 1);
+            int endPos = (commaPos != -1 && commaPos < bracePos) ? commaPos : bracePos;
 
-            String value = extractedSection.substring(ppc + 1, pdc);
-            return value;
+            String value = extractedSection.substring(0, endPos);
+            value.trim();
+
+            if (value == "true") {
+                return true;
+            } else {
+                return false;
+            }
         }
     }
 
-    return "";
+    return false;
+}
+
+template <>
+int DeviceConfigJSON::getSet<int>(String& js, const String& searchString) {
+    int startPos = js.indexOf(searchString);
+
+    if (startPos != -1) {
+        int openBracePos = js.lastIndexOf('{', startPos);
+        int closeBracePos = js.indexOf('}', startPos);
+
+        if (openBracePos != -1 && closeBracePos != -1) {
+            String extractedSection = js.substring(openBracePos, closeBracePos + 1);
+
+	    String fieldName = "set";
+            int valueStart = extractedSection.indexOf("\"" + fieldName + "\":");
+	
+            extractedSection = extractedSection.substring(valueStart + 6);
+	    int commaPos = extractedSection.indexOf(',');
+            int bracePos = extractedSection.indexOf('}');
+
+            int endPos = (commaPos != -1 && commaPos < bracePos) ? commaPos : bracePos;
+
+            String value = extractedSection.substring(0, endPos);
+            value.trim();
+
+	    return value.toInt();
+        }
+    }
+
+    return 0;
 }
