@@ -4,7 +4,7 @@
 * <a href="https://github.com/marcin-filipiak/DeviceConfigJSON#how-it-works">How it works?</a>
 * <a href="https://github.com/marcin-filipiak/DeviceConfigJSON#field-types">Field types</a>
 * <a href="https://github.com/marcin-filipiak/DeviceConfigJSON#json-format">JSON Format</a>
-* <a href="https://github.com/marcin-filipiak/DeviceConfigJSON#gui-for-easy-configuration">GUI for easy configuration</a>
+* <a href="https://github.com/marcin-filipiak/DeviceConfigJSON#gui-for-easy-configuration">GUI for easy configuration (also for Android)</a>
 
 
 ## Description
