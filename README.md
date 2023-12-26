@@ -30,6 +30,8 @@ This JSON format can be transmitted to various destinations via serial ports, Bl
 
 In essence, this library provides a versatile and efficient means to configure and manage ESP32 devices, making it easy to adjust and exchange device settings through different communication channels.
 
+Here you can find some example projects in Arduino: https://github.com/marcin-filipiak/DeviceConfigJSON/tree/main/examples
+
 ## Field types
 
 The DeviceConfigJSON library offers a range of field types for configuring device settings, each serving a specific purpose:
