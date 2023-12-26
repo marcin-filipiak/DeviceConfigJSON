@@ -1,6 +1,7 @@
-# Examples
+# DeviceConfigJson Examples 
 
-You can find some examples here.
+Here you can find some examples of DCJ library.
+Folder name: Example_DCJ_[microcontroller]_[communication][extensions]
 
 ### Example_DCJ_ESP32_BT
 * platform: Arduino
