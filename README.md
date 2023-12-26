@@ -133,6 +133,6 @@ In development, there are several programs that will facilitate easy device conf
 
 ### Android (bluetooth client):
 * https://github.com/marcin-filipiak/IoT_Configurator
-### Python (bluetoth client):
+### Python (bluetooth client):
 * https://github.com/marcin-filipiak/PyClientDeviceConfigJSON
 
