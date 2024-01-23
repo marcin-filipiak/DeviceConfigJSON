@@ -132,7 +132,12 @@ By defining a well-structured JSON format for configuration, you can ensure that
 In development, there are several programs that will facilitate easy device configuration using this protocol and Bluetooth communication. Keep an eye on this section to stay up-to-date with the list of compatible programs.
 
 ### Android (bluetooth client):
-* https://github.com/marcin-filipiak/IoT_Configurator
+
+https://github.com/marcin-filipiak/IoT_Configurator
+
+<a href="https://play.google.com/store/apps/details?id=com.iot_config&pcampaignid=web_share" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"></a>
+
 ### Python (bluetooth client):
-* https://github.com/marcin-filipiak/PyClientDeviceConfigJSON
+
+https://github.com/marcin-filipiak/PyClientDeviceConfigJSON
 
